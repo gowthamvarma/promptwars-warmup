@@ -11,7 +11,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
  * @returns {Promise<Object>} The generated itinerary in JSON format.
  */
 export async function generateItinerary(preferences) {
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
   const prompt = `
     You are a travel planning assistant. Generate a detailed, personalized travel itinerary based on the following preferences:
