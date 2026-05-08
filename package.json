@@ -2,7 +2,7 @@
   "name": "promptwars-warmup",
   "version": "1.0.0",
   "description": "Important Rules\r You have a maximum of 3 submission attempts.\r The repository size must be less than 10 MB\r The GitHub repository must be public\r The repository should contain only one branch\r Failure to follow these rules may result in your submission not being evaluated",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
