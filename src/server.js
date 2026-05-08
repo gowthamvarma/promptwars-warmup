@@ -19,6 +19,15 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Ensure trailing slash for relative paths on Cloud Functions
+app.use((req, res, next) => {
+  if (req.path === "/" && !req.originalUrl.endsWith("/")) {
+    return res.redirect(301, req.originalUrl + "/");
+  }
+  next();
+});
+
+
 // Routes
 app.get("/", (req, res) => {
   res.render("index");
